@@ -11,11 +11,12 @@ studentmarkdict = {"Name": studentname, "Student id": studentid, "Student name":
 key = input("Enter course to modify: ")
 
 if key in studentmarkdict:
-    value = input(f"Enter the new mark for '{key}': ")
-    studentmarkdict[mark] = value
+    coursevalue = input("Enter new course name")
+    studentmarkdict[coursename] = coursevalue
+    markvalue = input(f"Enter the new mark for '{key}': ")
+    studentmarkdict[mark] = markvalue
 
     print(studentmarkdict)
 
 else:
     print("Key not found")
-
