@@ -8,11 +8,13 @@ coursename = input("Enter course name: ")
 mark = input("Enter mark: ")
 studentmarkdict = {"Name": studentname, "Student id": studentid, "Student name": studentname, "Student DoB": studentdob, "Course id": courseid, "Coursename": coursename, "Mark": mark}
 
-key = input("Enter key to modify: ")
+key = input("Enter course to modify: ")
 
 if key in studentmarkdict:
-    value = input(f"Enter the new value for '{key}': ")
-    studentmarkdict[key] = value
+    value = input(f"Enter the new mark for '{key}': ")
+    studentmarkdict[mark] = value
     print(studentmarkdict)
+
 else:
     print("Key not found")
+
