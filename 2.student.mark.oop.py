@@ -34,7 +34,7 @@ for _ in range(nostudent):
     nocourse = int(input("Enter number of courses: "))
 
     for _ in range(nocourse):
-        courseid = int(input("Enter course id: "))
+        courseid = input("Enter course id: ")
         coursename = input("Enter course name: ")
         mark = int(input("Enter mark: "))
 
@@ -43,8 +43,15 @@ for _ in range(nostudent):
 
     students.append(studentinfo)
 
+for x in range(nostudent):
+    print("Student name: ",students[x].studentname)
+    print("Student id: ",students[x].studentid)
+    print("Student dob: ",students[x].dob)
+    print(students[x].marks)
+
+
 key = input("Enter course to modify: ")
-key2 = input("Enter mark: ")
+key2 = int(input("Enter mark: "))
 
 for x in range(nostudent):
     students[x].modmark(key, key2)
@@ -52,5 +59,4 @@ for x in range(nostudent):
     print("Student name: ",students[x].studentname)
     print("Student id: ",students[x].studentid)
     print("Student dob: ",students[x].dob)
-
     print(students[x].marks)
