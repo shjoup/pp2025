@@ -1,9 +1,6 @@
 import math
 import numpy
 
-
-
-
 class Course:
     def __init__(self, courseid, coursename):
         self.__courseid = courseid
@@ -74,14 +71,16 @@ for x in range(nostudent):
     print("Student id: ",students[x].get_studentid())
     print("Student dob: ",students[x].get_dob())
     print(students[x].get_marks())
-    print("Gpa: ", students[x].get_avgmarks())
+    print(f"{students[x].get_avgmarks(): .2f}")
     print("========================================")
 
 yn = input("Do you want to modify mark? y/n: ")
 if yn.lower() == "y":
 
+
     key = input("Enter course to modify: ")
     key2 = math.floor(float(input("Enter mark: ")))
+
 
     for x in range(nostudent):
         students[x].modmark(key, key2)
@@ -90,7 +89,7 @@ if yn.lower() == "y":
         print("Student id: ",students[x].get_studentid())
         print("Student dob: ",students[x].get_dob())
         print(students[x].get_marks())
-        print("Gpa: ", students[x].get_avgmarks())
+        print(f"{students[x].get_avgmarks(): .2f}")
         print("========================================")
 
 elif yn.lower() == "n":
